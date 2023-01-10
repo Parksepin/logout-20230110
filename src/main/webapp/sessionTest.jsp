@@ -17,6 +17,12 @@
 		}else{
 			out.print(sessionId + "님 로그인 중임");
 		}
+		
+		int sTime = session.getMaxInactiveInterval();
+		System.out.println("기본값 : "+sTime);
+		session.setMaxInactiveInterval(3600);
+		int sTime2 = session.getMaxInactiveInterval();
+		System.out.println("변경후 : "+sTime2);
 	%>
 	<br>
 	<a href="logout.jsp">로그아웃</a>
